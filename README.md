@@ -16,14 +16,12 @@ The purpose of this analysis is to determine the sustainability of the surf and 
 Since the mean and 50% quartile temperatures were both higher in June, the average temperature is higher for June than that for December. A lower standard deviation of temperature in June showed that the distribution of temperature is closer to the mean, so the temperature in June might fluctuate less than December.
 
 Two additional queries to perform to gather more weather data for June and December:
- 1) A query that filters the Measurement table to retrieve the Precipitation for the month of June.
-
-	'''
+ 1. A query that filters the Measurement table to retrieve the Precipitation for the month of June.
+	
 	session.query(Measurement.date, Measurement.prcp).\
 	filter(func.strftime("%m", Measurement.date) == June_str).all()
-	'''
 
- 2) A query that filters the Measurement table to retrieve the Precipitation for the month of June
+ 2.  A query that filters the Measurement table to retrieve the Precipitation for the month of December.
 
 	session.query(Measurement.date, Measurement.prcp).\
 	filter(func.strftime("%m", Measurement.date) == Dec_str).all()
