@@ -18,8 +18,8 @@ Since the mean and 50% quartile temperatures were both higher in June, the avera
 Two additional queries to perform to gather more weather data for June and December:
  1) A query that filters the Measurement table to retrieve the Precipitation for the month of June.
 
-session.query(Measurement.date, Measurement.prcp).\
-filter(func.strftime("%m", Measurement.date) == June_str).all()
+'''session.query(Measurement.date, Measurement.prcp).\
+filter(func.strftime("%m", Measurement.date) == June_str).all()'''
 
  2)A query that filters the Measurement table to retrieve the Precipitation for the month of June
 
